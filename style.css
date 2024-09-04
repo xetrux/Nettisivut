@@ -1,0 +1,30 @@
+body{
+    background-color: black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.bottomParent{
+    position: absolute;
+    width: 100%;
+    top: 95%;
+    margin-left: -5px;
+}
+
+.bottomParent.activated{
+    animation: move 1s ease-in-out;
+    animation-fill-mode: both;
+}
+
+@keyframes move {
+    from{top: 95%;}
+    to{top: 0%;}
+}
+
+.bottom{
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background-color: white;
+    border-radius: 25px;
+}
