@@ -6,25 +6,15 @@
     </head>
     <body>
         <h1>Header</h1>
-        <button class="button1">offset1</button>
         <div class="bottomParent">
             <div class="bottom"></div>
         </div>
     </body>
     <script>
         const bParent = document.querySelector(".bottomParent");
-        const button1 = document.querySelector(".button1");
-
         const callback = () => {
             bParent.classList.add("activated");
         }
-        window.onscroll = () => {
-            callback()
-        }
-        const getOffset = () => {
-            var offset = bParent.offset();
-            bParent.textContent = "nigger";
-        }
-        button1.addEventListener("click",getOffset); 
+        window.addEventListener("scroll", callback);
     </script>
 </html>
