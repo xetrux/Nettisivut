@@ -1,46 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
 body{
     background-color: rgb(31, 32, 34);
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, #1b1b1b 1px, transparent 1px), 
+    linear-gradient(to bottom, #1b1b1b 1px, transparent 1px), 
+    radial-gradient(circle, #1b1b1b 2px, rgba(0, 0, 0, 0) 1px);
 }
 
 .parentDiv{
-    position: absolute;
-    height: 50px;
-    width: 400px;
-    top: 5%;
-    left: 10%;
-    
+    height: 80px;
+    width: 100%px;
+    display: flex;
+    margin-left: 4cm;
+    margin-top: 3cm;
 }
 
 p{
     position: relative;
     font-size: 40px;
-    font-family: "Courier New", monospace;
+    font-family: "Source Code Pro", monospace;
     color: rgb(116, 116, 116);
-    margin-top: 0;
+    margin-top: 12px;
     margin-bottom: 0;
-    text-align: left;
+    text-align: right;
+    padding-right: 40px;
 }
 
 .mainText{
     position: relative;
     font-size: 40px;
-    font-family: "Courier New", monospace;
-    color: rgb(218, 218, 218);
+    font-family: "Source Code Pro", monospace;
+    color: rgb(255, 255, 255);
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 10px;
     padding: 3px;
     text-align: left;
+    word-break: break-all;
 }
 
 .childText{
-    display: inline-block;
+    text-align: right;
+    width: 200px;
 }
 
 .innerDiv{
-    display: inline-block;
     position: relative;
-    background-color: rgb(116, 116, 116);
-    width: 10cm;
-    height: 50px;
+    background-color: rgb(68, 68, 68);
+    width: 15cm;
+    height: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#inner1{
+    height: 80px;
 }
