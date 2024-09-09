@@ -1,18 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
 body{
-    background-color: rgb(31, 32, 34);
+    background-color: rgb(17, 18, 19);
     background-size: 40px 40px;
-    background-image: linear-gradient(to right, #1b1b1b 1px, transparent 1px), 
-    linear-gradient(to bottom, #1b1b1b 1px, transparent 1px), 
-    radial-gradient(circle, #1b1b1b 2px, rgba(0, 0, 0, 0) 1px);
+    background-image: linear-gradient(to right, #0f0f0f 1px, transparent 1px), 
+    linear-gradient(to bottom, #0f0f0f 1px, transparent 1px), 
+    radial-gradient(circle, #0f0f0f 2px, rgba(0, 0, 0, 0) 1px);
 }
 
 .parentDiv{
     height: 80px;
-    width: 100%px;
+    width: auto;
     display: flex;
     margin-left: 4cm;
     margin-top: 3cm;
+}
+
+.rightButtonLayout{
+    position: relative;
+    height: 80px;
+    width: 20cm;
+    margin-right: 4cm;
+    margin-left: auto;
+    display: flex;
+}
+
+.napit{
+    margin-left: auto;
+    width: 7cm;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    font-family: "Source Code Pro", monospace;
+}
+
+.napit:hover{
+    background-color: rgb(68, 68, 68);
+}
+
+.nappienVäli{
+    position: relative;
+    font-size: 40px;
+    margin-left: auto;
+    text-align: center;
+    font-family: "Source Code Pro", monospace;
+    color: rgb(116, 116, 116);
+    line-height: 70px;
+    width: 2cm;
 }
 
 p{
@@ -51,6 +85,12 @@ p{
     height: 80px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.innerDiv.hide{
+    transition: 1s;
+    height: 0;
+    width: 0;
 }
 
 #inner1{
