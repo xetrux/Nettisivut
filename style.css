@@ -19,7 +19,7 @@ body{
     position: relative;
     height: 80px;
     width: 20cm;
-    margin-right: 4cm;
+    margin-right: 6cm;
     margin-left: auto;
     display: flex;
 }
@@ -32,6 +32,7 @@ body{
     background-color: rgba(0, 0, 0, 0);
     border-color: rgba(0, 0, 0, 0);
     font-family: "Source Code Pro", monospace;
+    text-align: center;
 }
 
 .napit:hover{
@@ -88,11 +89,14 @@ p{
 }
 
 .innerDiv.hide{
-    transition: 1s;
-    height: 0;
+    transition-duration: 1s;
     width: 0;
 }
 
 #inner1{
-    height: 80px;
+    height: 260px;
+}
+
+#parent1{
+    height: 200px;
 }
