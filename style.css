@@ -1,33 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+html{
+    font-size: 1vw;
+}
+
 body{
     background-color: rgb(17, 18, 19);
     background-size: 40px 40px;
     background-image: linear-gradient(to right, #0f0f0f 1px, transparent 1px), 
     linear-gradient(to bottom, #0f0f0f 1px, transparent 1px), 
     radial-gradient(circle, #0f0f0f 2px, rgba(0, 0, 0, 0) 1px);
+    font-size: 100%;
+    overflow-y: hidden;
 }
 
 .parentDiv{
-    height: 80px;
+    height: 4.5em;
     width: auto;
     display: flex;
-    margin-left: 4cm;
-    margin-top: 3cm;
+    margin-left: 5em;
+    margin-top: 6em;
 }
 
 .rightButtonLayout{
     position: relative;
-    height: 80px;
-    width: 20cm;
-    margin-right: 6cm;
+    height: 4.5em;
+    width: 35em;
+    margin-right: 6em;
     margin-left: auto;
     display: flex;
 }
 
 .napit{
     margin-left: auto;
-    width: 7cm;
-    font-size: 40px;
+    width: 10em;
+    font-size: 200%;
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0);
     border-color: rgba(0, 0, 0, 0);
@@ -36,67 +42,106 @@ body{
 }
 
 .napit:hover{
+    transition: 0.1s;
     background-color: rgb(68, 68, 68);
 }
 
 .nappienVäli{
     position: relative;
-    font-size: 40px;
+    font-size: 200%;
     margin-left: auto;
     text-align: center;
     font-family: "Source Code Pro", monospace;
     color: rgb(116, 116, 116);
-    line-height: 70px;
-    width: 2cm;
+    line-height: 2.1em;
+    width: 2em;
 }
 
 p{
     position: relative;
-    font-size: 40px;
+    font-size: 200%;
     font-family: "Source Code Pro", monospace;
     color: rgb(116, 116, 116);
-    margin-top: 12px;
-    margin-bottom: 0;
+    margin-top: 0.3em;
+    margin-bottom: 0em;
     text-align: right;
-    padding-right: 40px;
+    padding-right: 1em;
 }
 
 .mainText{
     position: relative;
-    font-size: 40px;
+    font-size: 200%;
     font-family: "Source Code Pro", monospace;
     color: rgb(255, 255, 255);
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 10px;
-    padding: 3px;
+    margin-left: 0.3em;
+    padding: 0.1em;
     text-align: left;
     word-break: break-all;
 }
 
 .childText{
     text-align: right;
-    width: 200px;
+    width: 10em;
 }
 
 .innerDiv{
     position: relative;
     background-color: rgb(68, 68, 68);
-    width: 15cm;
-    height: 80px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    width: 28em;
+    height: 4.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 .innerDiv.hide{
+    transition-delay: 0s;
     transition-duration: 1s;
-    width: 0;
+    width: 0em;
+}
+
+.innerDiv.show{
+    transition-delay: 1.1s;
+    transition-duration: 1s;
+    width: 28em;
+}
+
+.innerDiv.default{
+    transition-delay: 0s;
+    transition-duration: 0s;
 }
 
 #inner1{
-    height: 260px;
+    height: 13em;
 }
 
 #parent1{
-    height: 200px;
+    height: 12em;
+}
+
+.projektitDiv{
+    height: 0em;
+    width: 40em;
+    background-color: rgb(68, 68, 68);
+    position: relative;
+    top: -33em;
+    margin-left: 15em;
+}
+
+.projektitDiv.show{
+    transition-delay: 1.1s;
+    transition-duration: 1s;
+    height: 40em;
+}
+
+.projektitDiv.hide{
+    transition-delay: 0s;
+    transition-duration: 1s;
+    height: 0em;
+}
+
+.projektitDiv.default{
+    transition-delay: 0s;
+    transition-duration: 0s;
 }
