@@ -2,7 +2,9 @@
 /*variables*/
 :root{
     --textSize: 150%;
+    --textSizeMobile: 200%;
     --font: "Source Code Pro", monospace;
+    --divWidth: 27em;
 }
 
 html{
@@ -24,14 +26,20 @@ body{
     width: auto;
     display: flex;
     margin-left: 4em;
+    margin-right: 4em;
     margin-top: 5em;
+}
+
+#firstDiv {
+    margin-top: -4.5em;
 }
 
 .rightButtonLayout{
     position: relative;
     height: 4.5em;
     width: 35em;
-    margin-right: 6em;
+    margin-top: 7em;
+    margin-right: 10em;
     margin-left: auto;
     display: flex;
 }
@@ -108,7 +116,7 @@ p{
 
 @keyframes innerDiv-show {
     from {width: var(--current);}
-    to {width: 27em;}
+    to {width: var(--divWidth);}
 }
 
 #inner1{
@@ -144,4 +152,40 @@ p{
 @keyframes projektitDiv-show {
     from {height: var(--projectCurrent);}
     to {height: 40em;}
+}
+
+@media only screen and (orientation:portrait) {
+    .rightButtonLayout{
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .parentDiv {
+        margin-top: 6em;
+    }
+    .childText {
+        margin-left: 0em;
+        font-size: var(--textSizeMobile);
+    }
+    .mainText {
+        font-size: var(--textSizeMobile);
+    }
+    .napit {
+        font-size: var(--textSizeMobile);
+    }
+    .nappienVäli {
+        font-size: var(--textSizeMobile);
+        line-height: 2.2em;
+    }
+    .innerDiv {
+        width: 59em;
+        height: 5em;
+    }
+    #firstDiv {
+        margin-top: 5em;
+    }
+    .projektitDiv {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
