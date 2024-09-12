@@ -4,7 +4,6 @@
     --textSize: 150%;
     --textSizeMobile: 200%;
     --font: "Source Code Pro", monospace;
-    --divWidth: 27em;
 }
 
 html{
@@ -46,6 +45,7 @@ body{
 
 .napit{
     margin-left: auto;
+    margin-right: auto;
     width: 10em;
     font-size: var(--textSize);
     color: rgb(255, 255, 255);
@@ -64,6 +64,7 @@ body{
     position: relative;
     font-size: var(--textSize);
     margin-left: auto;
+    margin-right: auto;
     text-align: center;
     font-family: var(--font);
     color: rgb(116, 116, 116);
@@ -116,7 +117,7 @@ p{
 
 @keyframes innerDiv-show {
     from {width: var(--current);}
-    to {width: var(--divWidth);}
+    to {width: 27em;}
 }
 
 #inner1{
@@ -159,6 +160,8 @@ p{
         margin-top: 0;
         margin-left: auto;
         margin-right: auto;
+        width: 70em;
+        height: 7em;
     }
     .parentDiv {
         margin-top: 6em;
@@ -171,11 +174,12 @@ p{
         font-size: var(--textSizeMobile);
     }
     .napit {
-        font-size: var(--textSizeMobile);
+        font-size: 300%;
     }
     .nappienVäli {
         font-size: var(--textSizeMobile);
         line-height: 2.2em;
+        font-size: 300%;
     }
     .innerDiv {
         width: 59em;
@@ -187,5 +191,22 @@ p{
     .projektitDiv {
         margin-left: auto;
         margin-right: auto;
+        width: 60em;
+    }
+    @keyframes innerDiv-hide {
+        from {width: var(--current);}
+        to {width: 0em;}
+    } 
+    @keyframes innerDiv-show {
+        from {width: var(--current);}
+        to {width: 59em;}
+    }
+    @keyframes projektitDiv-hide {
+        from {height: var(--projectCurrent);}
+        to {height: 0em;}
+    }
+    @keyframes projektitDiv-show {
+        from {height: var(--projectCurrent);}
+        to {height: 120em;}
     }
 }
