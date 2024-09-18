@@ -207,6 +207,6 @@ p{
     }
     @keyframes projektitDiv-show {
         from {height: var(--projectCurrent);}
-        to {height: 120em;}
+        to {height: 80em;}
     }
 }

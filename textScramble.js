@@ -4,7 +4,7 @@ const button2 = document.getElementById("tiedotNappi");
 
 var originalText = [];
 
-var transitioning = false;
+var transitioningText = false;
 
 async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -31,29 +31,36 @@ async function showText(element, Text) {
     }
 }
 
-function callback1() {
-    if (!transitioning) {
-        
-    }
-    for (let i = 0; i < text.length; i++) {
-        deleteText(text[i])
-        button.textContent = "[PROJEKTIT]"
-        button2.textContent = "TIEDOT"
+async function callback1() {
+    if (!transitioningText) {
+        for (let i = 0; i < text.length; i++) {
+            deleteText(text[i])
+            button.textContent = "[PROJEKTIT]";
+            button2.textContent = "TIEDOT";
+        }
+        transitioningText = true;
+        console.log(transitioningText);
+        await sleep(2500);
+        transitioningText = false;
+        console.log(transitioningText);
     }
 }
 
-function callback2() {
-    if (!transitioning) {
-
+async function callback2() {
+    if (!transitioningText) {
+        for (let i = 0; i < text.length; i++) {
+            var orgText = originalText[i];
+            showText(text[i], orgText);
+        }
+        button.textContent = "PROJEKTIT";
+        button2.textContent = "[TIEDOT]";
+        transitioningText = true;
+        console.log(transitioningText);
+        await sleep(3000);
+        transitioningText = false;
+        console.log(transitioningText); 
     }
-    for (let i = 0; i < text.length; i++) {
-        var orgText = originalText[i];
-        showText(text[i], orgText);
-    }
-    button.textContent = "PROJEKTIT"
-    button2.textContent = "[TIEDOT]"
-
 }
 
-button.addEventListener("click", callback1)
-button2.addEventListener("click", callback2)
+button.addEventListener("click", callback1);
+button2.addEventListener("click", callback2);
